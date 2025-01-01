@@ -219,5 +219,80 @@ convenient methods:
 
 ▪ get_list_or_404()
 
+----------------------------------------------------------------------
+render()
+----------------------------------------------------------------------
 
+▪ Combines a template with a context dictionary.
+
+▪ Returns an HttpResponse object with the
+rendered text.
+
+▪ Simplifies the process of rendering dynamic content.
+
+▪ by automatically handling the template rendering.
+
+▪ creating an HTTP response with the
+rendered content.
+
+▪ Required arguments:
+
+&nbsp;&nbsp;&nbsp;&nbsp; ▪ request - The HttpRequest object used in
+generating the response.
+
+&nbsp;&nbsp;&nbsp;&nbsp; ▪ template_name - The full name of the template to
+be used for rendering.
+
+------------------------------------------------------------------------------
+redirect()
+------------------------------------------------------------------------------
+
+▪ Is used to redirect the user to the appropriate URL.
+
+▪ By passing a hardcoded URL to redirect to:
+
+&nbsp;&nbsp;&nbsp;&nbsp; ▪ redirect('/some/url/')
+
+▪ By passing the name of a view along with optional
+positional or keyword arguments.
+
+&nbsp;&nbsp;&nbsp;&nbsp; ▪ redirect(some_view_name, *args, **kwargs) 
+
+▪ It returns an HTTP status code of 302.
+
+---------------------------------------------------
+Named URLs
+---------------------------------------------------
+
+▪ Add a name to the path in the urls.py module
+
+    from django.urls import path
+    from . import views
+    
+    urlpatterns = [
+        path(
+            'department/<int:department_id>/',
+            views.show_department_by_id,
+            name='department_by_id'       # name of the path
+        ),
+    ]
+
+------------------------------------------------------------
+reverse()
+------------------------------------------------------------
+
+▪ URL reversing is a process in Django that allows you:
+
+&nbsp;&nbsp;&nbsp;&nbsp; ▪ to generate a URL for a specific view.
+
+&nbsp;&nbsp;&nbsp;&nbsp; ▪ based on its name and any arguments it may require.
+
+    from django.urls import reverse
+
+    
+    url = reverse('department-by-id', kwargs={'department_id': 1})
+
+&nbsp;&nbsp;&nbsp;&nbsp; ▪ Helps to decouple URLs from view functions.
+
+&nbsp;&nbsp;&nbsp;&nbsp; ▪ Allows you to generate URLs based on the current state of your application and the data available.
 
