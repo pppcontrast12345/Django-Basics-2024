@@ -1,4 +1,4 @@
-﻿Django Template Basics
+4.0 ﻿Django Template Basics
 ----------------------------------------------
 
 ▪ A text document (typically an HTML file).
