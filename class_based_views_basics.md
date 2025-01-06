@@ -1,4 +1,4 @@
-﻿Class-Based Views Basic
+8.0 ﻿Class-Based Views Basic
 -------------------------------------------
 What are CBVs?
 
