@@ -1,8 +1,7 @@
 9.0 Class-Based Views Advanced
-
 ---------------------------------------------------------------
 Built-in Generic Views Benefits
----------------------------------------------------------------
+
 
 ▪ Generic views in Django are designed to:
 
